@@ -1,0 +1,39 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "plugins": ["jest"],
+    "extends": [
+        "airbnb-typescript",
+        "plugin:prettier/recommended",
+        "plugin:jest/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/indent": "off",
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react/prop-types": [0],
+        "react/jsx-props-no-spreading": "off",
+        "global-require": "off",
+        "import/named": "off",
+        "@typescript-eslint/camelcase": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["."]
+            },
+            "babel-module": {
+                "alias": {
+                    "assets": "./assets",
+                    "components": "./components",
+                    "contexts": "./contexts",
+                    "screens": "./screens",
+                    "test": "./test"
+                }
+            }
+        }
+    }
+}
